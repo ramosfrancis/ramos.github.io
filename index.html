@@ -1,47 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Francis S. Ramos | Game Developer Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset & basic styling */
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    body {font-family: 'Arial', sans-serif; background-color: #121212; color: #fff; line-height: 1.6;}
+    a {text-decoration: none; color: inherit;}
+    h1, h2, h3 {margin-bottom: 10px;}
+    p {margin-bottom: 15px;}
+
+    /* Navbar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      position: sticky;
+      top: 0;
+      background-color: #1e1e1e;
+      z-index: 1000;
+    }
+    nav ul {display: flex; list-style: none; gap: 30px;}
+    nav li:hover {color: #00ffff;}
+    nav a {font-weight: bold; transition: 0.3s;}
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 90vh;
+      text-align: center;
+      padding: 0 20px;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    }
+    .hero h1 {font-size: 3em; margin-bottom: 20px;}
+    .hero p {font-size: 1.2em; max-width: 600px; margin-bottom: 30px;}
+    .hero a {
+      padding: 12px 30px;
+      background-color: #00ffff;
+      color: #121212;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+    .hero a:hover {background-color: #00b3b3;}
+
+    /* Sections */
+    section {padding: 80px 50px; max-width: 1000px; margin: auto;}
+    section h2 {color: #00ffff; font-size: 2em; margin-bottom: 20px; border-bottom: 2px solid #00ffff; display: inline-block; padding-bottom: 5px;}
+    
+    /* Skills */
+    .skills {display: flex; flex-wrap: wrap; gap: 20px;}
+    .skill-card {background-color: #1e1e1e; padding: 20px; border-radius: 8px; flex: 1 1 200px; text-align: center; transition: 0.3s;}
+    .skill-card:hover {background-color: #00ffff; color: #121212;}
+
+    /* Projects */
+    .projects {display: flex; flex-direction: column; gap: 30px;}
+    .project-card {background-color: #1e1e1e; padding: 20px; border-radius: 8px; transition: 0.3s;}
+    .project-card:hover {background-color: #00ffff; color: #121212;}
+
+    /* Contact */
+    .contact a {color: #00ffff; font-weight: bold;}
+    .contact a:hover {color: #fff;}
+
+    /* Footer */
+    footer {text-align: center; padding: 20px; background-color: #1e1e1e;}
+    
+    /* Responsive */
+    @media(max-width:768px){
+      nav {flex-direction: column; gap: 15px;}
+      .hero h1 {font-size: 2.2em;}
+      .hero p {font-size: 1em;}
+      .skills {flex-direction: column;}
+    }
+  </style>
 </head>
 <body>
-  <!-- Header Section -->
-  <header>
-    <nav>
-      <h1 class="logo">Francis S. Ramos</h1>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="hero">
-      <h2>Hi, I'm <span>Francis</span></h2>
-      <p>An IT Student and Aspiring Game Developer passionate about coding and creating immersive digital worlds.</p>
-      <a href="#projects" class="btn">View My Work</a>
-    </div>
-  </header>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo"><strong>Francis S. Ramos</strong></div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Hi, I'm Francis</h1>
+    <p>An IT Student and Aspiring Game Developer passionate about coding and creating immersive digital worlds.</p>
+    <a href="#projects">View My Work</a>
+  </section>
 
   <!-- About Section -->
-  <section id="about" class="section">
+  <section id="about">
     <h2>About Me</h2>
-    <p>
-      Hello! I'm <strong>Francis S. Ramos</strong>, an Information Technology student majoring in <strong>Game Development</strong>.
-      I love designing, programming, and building games that combine creativity with technology.  
-      I work with game engines like <strong>Unity</strong> and <strong>Unreal Engine</strong> and use programming languages such as
-      <strong>C#</strong> and <strong>C++</strong> to bring my ideas to life.  
-      My goal is to become a professional game developer and contribute to exciting, story-driven, and innovative projects.
-    </p>
+    <p>Hello! I'm Francis S. Ramos, an Information Technology student majoring in Game Development. I love designing, programming, and building games that combine creativity with technology. I work with game engines like Unity and Unreal Engine and use programming languages such as C# and C++ to bring my ideas to life. My goal is to become a professional game developer and contribute to exciting, story-driven, and innovative projects.</p>
   </section>
 
   <!-- Skills Section -->
-  <section id="skills" class="section">
+  <section id="skills">
     <h2>Skills</h2>
-    <div class="skills-grid">
+    <div class="skills">
       <div class="skill-card">C# / C++ Programming</div>
       <div class="skill-card">Unity Game Engine</div>
       <div class="skill-card">Unreal Engine</div>
@@ -52,9 +120,9 @@
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="section">
+  <section id="projects">
     <h2>Projects</h2>
-    <div class="projects-grid">
+    <div class="projects">
       <div class="project-card">
         <h3>Galaxy Defender</h3>
         <p>A 2D space shooter made in Unity where players defend Earth from waves of alien ships. Features custom particle effects and scoring system.</p>
@@ -71,18 +139,17 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="section">
+  <section id="contact">
     <h2>Contact</h2>
     <p>If you'd like to collaborate or discuss game ideas, feel free to reach out!</p>
-    <div class="contact-info">
-      <p>Email: <a href="mailto:francissramos@email.com">francissramos@email.com</a></p>
-      <p>GitHub: <a href="https://github.com/francissramos" target="_blank">github.com/francissramos</a></p>
-    </div>
+    <p>Email: <a href="mailto:francissramos@email.com">francissramos@email.com</a></p>
+    <p>GitHub: <a href="https://github.com/francissramos" target="_blank">github.com/francissramos</a></p>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 Francis S. Ramos. All rights reserved.</p>
+    © 2025 Francis S. Ramos. All rights reserved.
   </footer>
+
 </body>
 </html>
